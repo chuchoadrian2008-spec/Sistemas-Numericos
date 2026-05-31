@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema Hexadecimal</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+}
+
+header{
+    background:#1e293b;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:3px solid #22c55e;
+}
+
+h1{
+    margin:0;
+    color:#86efac;
+    font-size:38px;
+}
+
+.volver{
+    text-decoration:none;
+    background:#22c55e;
+    color:white;
+    padding:12px 20px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.contenedor{
+    width:90%;
+    margin:auto;
+    padding:30px 0;
+}
+
+.principal{
+    background:#1e293b;
+    border:2px solid #22c55e;
+    border-radius:20px;
+    padding:25px;
+    margin-bottom:30px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:25px;
+}
+
+.caja{
+    background:#1e293b;
+    border:2px solid #22c55e;
+    border-radius:20px;
+    padding:20px;
+}
+
+h2{
+    color:#86efac;
+}
+
+iframe{
+    width:100%;
+    height:220px;
+    border:none;
+    border-radius:15px;
+}
+
+img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+td, th{
+    border:1px solid white;
+    padding:10px;
+    text-align:center;
+}
+
+input{
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    width:220px;
+}
+
+button{
+    padding:10px 18px;
+    border:none;
+    border-radius:10px;
+    background:#22c55e;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+ul{
+    line-height:2;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<a href="menu.html" class="volver">Regresar</a>
+<h1>Sistema Hexadecimal</h1>
+</header>
+
+<div class="contenedor">
+
+<div class="principal">
+<h2>¿Qué es el sistema hexadecimal?</h2>
+<p>El sistema hexadecimal es un sistema numérico de base 16. Usa números del 0 al 9 y letras A-F.</p>
+<p>Es común en programación, direcciones de memoria y colores web.</p>
+<h2>Conversión de Hexadecimal a otros sistemas</h2>
+
+<h3>Hexadecimal a Decimal</h3>
+<p>Para convertir un número hexadecimal a decimal se multiplica cada dígito por una potencia de 16, comenzando desde la derecha.</p>
+
+<p><strong>Ejemplo:</strong> Convertir 2A a decimal</p>
+<p>
+2 × 16¹ = 32<br>
+A = 10 × 16⁰ = 10
+</p>
+
+<p>Se suman los resultados:</p>
+<p>32 + 10 = 42</p>
+
+<p><strong>Resultado:</strong> 42</p>
+
+<hr>
+
+<h3>Hexadecimal a Binario</h3>
+<p>Para convertir de hexadecimal a binario, cada dígito se reemplaza por su equivalente en 4 bits.</p>
+
+<p><strong>Ejemplo:</strong> Convertir 3F a binario</p>
+<p>
+3 = 0011<br>
+F = 1111
+</p>
+
+<p>Se unen:</p>
+<p>00111111</p>
+
+<p><strong>Resultado:</strong> 111111</p>
+
+<hr>
+
+<h3>Hexadecimal a Octal</h3>
+<p>Primero se convierte a binario y después se agrupan los bits de 3 en 3 para obtener octal.</p>
+
+<p><strong>Ejemplo:</strong> Convertir 1C a octal</p>
+<p>
+1 = 0001<br>
+C = 1100
+</p>
+
+<p>Unido:</p>
+<p>00011100</p>
+
+<p>Se agrupa:</p>
+<p>000 011 100</p>
+
+<p>Conversión:</p>
+<p>
+000 = 0<br>
+011 = 3<br>
+100 = 4
+</p>
+
+<p><strong>Resultado:</strong> 34</p>
+</div>
+
+<div class="grid">
+
+<div class="caja">
+<h2>Video</h2>
+    <video width="100%" controls>
+        <source src="5.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div class="caja">
+<h2>Ejemplo</h2>
+<img src="5.png">
+</div>
+
+<div class="caja">
+<h2>Equivalencias</h2>
+<table>
+<tr><th>Decimal</th><th>Hex</th></tr>
+<tr><td>10</td><td>A</td></tr>
+<tr><td>11</td><td>B</td></tr>
+<tr><td>15</td><td>F</td></tr>
+<tr><td>26</td><td>1A</td></tr>
+</table>
+</div>
+
+</div>
+
+<div class="principal">
+<h2>Características</h2>
+<ul>
+<li>Base 16.</li>
+<li>Usa 0-9 y A-F.</li>
+<li>Muy usado en programación.</li>
+<li>Representa colores y memoria.</li>
+<li>Compacto y eficiente.</li>
+</ul>
+</div>
+
+<div class="principal">
+<h2>Convertidor Hexadecimal</h2>
+
+<p>Escribe un número hexadecimal:</p>
+
+<input type="text" id="hexInput" placeholder="Ejemplo: A1">
+
+<button onclick="convertir()">Convertir</button>
+
+<div style="margin-top:20px; line-height:2; font-size:18px;">
+<p>Decimal: <span id="decimal">-</span></p>
+<p>Binario: <span id="binario">-</span></p>
+<p>Octal: <span id="octal">-</span></p>
+</div>
+
+</div>
+
+</div>
+
+<script>
+function convertir(){
+
+let numero = document.getElementById("hexInput").value;
+
+if(numero===""){
+alert("Ingresa un número");
+return;
+}
+
+let decimal = parseInt(numero,16);
+
+document.getElementById("decimal").innerHTML = decimal;
+document.getElementById("binario").innerHTML = decimal.toString(2);
+document.getElementById("octal").innerHTML = decimal.toString(8);
+
+}
+</script>
+
+</body>
+</html>

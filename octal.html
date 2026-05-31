@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema Octal</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+}
+
+header{
+    background:#1e293b;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:3px solid #22c55e;
+}
+
+h1{
+    margin:0;
+    color:#86efac;
+    font-size:38px;
+}
+
+.volver{
+    text-decoration:none;
+    background:#22c55e;
+    color:white;
+    padding:12px 20px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.contenedor{
+    width:90%;
+    margin:auto;
+    padding:30px 0;
+}
+
+.principal{
+    background:#1e293b;
+    border:2px solid #22c55e;
+    border-radius:20px;
+    padding:25px;
+    margin-bottom:30px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:25px;
+}
+
+.caja{
+    background:#1e293b;
+    border:2px solid #22c55e;
+    border-radius:20px;
+    padding:20px;
+}
+
+h2{
+    color:#86efac;
+}
+
+iframe{
+    width:100%;
+    height:220px;
+    border:none;
+    border-radius:15px;
+}
+
+img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+td, th{
+    border:1px solid white;
+    padding:10px;
+    text-align:center;
+}
+
+input{
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    width:220px;
+}
+
+button{
+    padding:10px 18px;
+    border:none;
+    border-radius:10px;
+    background:#22c55e;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+ul{
+    line-height:2;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<a href="menu.html" class="volver">Regresar</a>
+<h1>Sistema Octal</h1>
+</header>
+
+<div class="contenedor">
+
+<div class="principal">
+<h2>¿Qué es el sistema octal?</h2>
+<p>El sistema octal es un sistema numérico de base 8. Utiliza los dígitos del 0 al 7.</p>
+<p>Fue usado en informática para representar números binarios de forma más compacta.</p>
+<h2>Conversión de Octal a otros sistemas</h2>
+
+<h3>Octal a Decimal</h3>
+<p>Para convertir un número octal a decimal se multiplica cada dígito por una potencia de 8, comenzando desde la derecha.</p>
+
+<p><strong>Ejemplo:</strong> Convertir 27 a decimal</p>
+<p>
+2 × 8¹ = 16<br>
+7 × 8⁰ = 7
+</p>
+
+<p>Se suman los resultados:</p>
+<p>16 + 7 = 23</p>
+
+<p><strong>Resultado:</strong> 23</p>
+
+<hr>
+
+<h3>Octal a Binario</h3>
+<p>Para convertir de octal a binario, cada dígito octal se reemplaza por su equivalente en 3 bits.</p>
+
+<p><strong>Ejemplo:</strong> Convertir 35 a binario</p>
+<p>
+3 = 011<br>
+5 = 101
+</p>
+
+<p>Se unen los grupos:</p>
+<p>011101</p>
+
+<p><strong>Resultado:</strong> 11101</p>
+
+<hr>
+
+<h3>Octal a Hexadecimal</h3>
+<p>Primero se convierte el número octal a binario y después se agrupan los bits de 4 en 4 para pasarlo a hexadecimal.</p>
+
+<p><strong>Ejemplo:</strong> Convertir 37 a hexadecimal</p>
+<p>
+3 = 011<br>
+7 = 111
+</p>
+
+<p>Unido:</p>
+<p>011111</p>
+
+<p>Se agrupa:</p>
+<p>0001 1111</p>
+
+<p>Conversión:</p>
+<p>
+0001 = 1<br>
+1111 = F
+</p>
+
+<p><strong>Resultado:</strong> 1F</p>
+</div>
+
+<div class="grid">
+
+<div class="caja">
+<video width="100%" controls>
+        <source src="4.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div class="caja">
+<h2>Ejemplo</h2>
+<img src="4.jpg">
+</div>
+
+<div class="caja">
+<h2>Equivalencias</h2>
+<table>
+<tr><th>Decimal</th><th>Octal</th></tr>
+<tr><td>8</td><td>10</td></tr>
+<tr><td>10</td><td>12</td></tr>
+<tr><td>15</td><td>17</td></tr>
+<tr><td>20</td><td>24</td></tr>
+</table>
+</div>
+
+</div>
+
+<div class="principal">
+<h2>Características</h2>
+<ul>
+<li>Base 8.</li>
+<li>Usa del 0 al 7.</li>
+<li>Facilita representación binaria.</li>
+<li>Se usa en informática.</li>
+<li>Más compacto que binario.</li>
+</ul>
+</div>
+
+<div class="principal">
+<h2>Convertidor Octal</h2>
+
+<p>Escribe un número octal:</p>
+
+<input type="text" id="octInput" placeholder="Ejemplo: 17">
+
+<button onclick="convertir()">Convertir</button>
+
+<div style="margin-top:20px; line-height:2; font-size:18px;">
+<p>Decimal: <span id="decimal">-</span></p>
+<p>Binario: <span id="binario">-</span></p>
+<p>Hexadecimal: <span id="hexadecimal">-</span></p>
+</div>
+
+</div>
+
+</div>
+
+<script>
+function convertir(){
+
+let numero = document.getElementById("octInput").value;
+
+if(numero===""){
+alert("Ingresa un número");
+return;
+}
+
+let decimal = parseInt(numero,8);
+
+document.getElementById("decimal").innerHTML = decimal;
+document.getElementById("binario").innerHTML = decimal.toString(2);
+document.getElementById("hexadecimal").innerHTML = decimal.toString(16).toUpperCase();
+
+}
+</script>
+
+</body>
+</html>

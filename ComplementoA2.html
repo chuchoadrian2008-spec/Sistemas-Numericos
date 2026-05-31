@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complemento A2</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+}
+
+header{
+    background:#1e293b;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:3px solid #22c55e;
+}
+
+h1{
+    margin:0;
+    color:#86efac;
+    font-size:38px;
+}
+
+.volver{
+    text-decoration:none;
+    background:#22c55e;
+    color:white;
+    padding:12px 20px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.contenedor{
+    width:90%;
+    margin:auto;
+    padding:30px 0;
+}
+
+.principal{
+    background:#1e293b;
+    border:2px solid #22c55e;
+    border-radius:20px;
+    padding:25px;
+    margin-bottom:30px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:25px;
+}
+
+.caja{
+    background:#1e293b;
+    border:2px solid #22c55e;
+    border-radius:20px;
+    padding:20px;
+}
+
+h2{
+    color:#86efac;
+}
+
+img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+td,th{
+    border:1px solid white;
+    padding:10px;
+    text-align:center;
+}
+
+input{
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    width:250px;
+}
+
+button{
+    padding:10px 18px;
+    border:none;
+    border-radius:10px;
+    background:#22c55e;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+ul{
+    line-height:2;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<a href="menu.html" class="volver">Regresar</a>
+<h1>Complemento A2</h1>
+</header>
+
+<div class="contenedor">
+
+<div class="principal">
+
+<h2>¿Qué es el Complemento a 2?</h2>
+
+<p>
+El complemento A2 es un método utilizado en informática para representar números negativos en sistema binario.
+</p>
+
+<p>
+Se obtiene siguiendo dos pasos:
+</p>
+
+<ol>
+<li>Invertir todos los bits (0 por 1 y 1 por 0).</li>
+<li>Sumar 1 al resultado obtenido.</li>
+</ol>
+
+<h2>Ejemplo</h2>
+
+<p>Número binario: 0101</p>
+
+<p>Complemento a 1:</p>
+<p>1010</p>
+
+<p>Se suma 1:</p>
+<p>1010 + 1 = 1011</p>
+
+<p><strong>Resultado:</strong> 1011</p>
+
+</div>
+
+<div class="grid">
+
+<div class="caja">
+<h2>Video</h2>
+
+<video width="100%" controls>
+<source src="7.mp4" type="video/mp4">
+</video>
+
+</div>
+
+<div class="caja">
+<h2>Ejemplo</h2>
+<img src="7.png">
+</div>
+
+<div class="caja">
+<h2>Pasos</h2>
+
+<table>
+<tr>
+<th>Paso</th>
+<th>Resultado</th>
+</tr>
+
+<tr>
+<td>Binario</td>
+<td>0101</td>
+</tr>
+
+<tr>
+<td>Invertir</td>
+<td>1010</td>
+</tr>
+
+<tr>
+<td>+1</td>
+<td>1011</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<div class="principal">
+
+<h2>Características</h2>
+
+<ul>
+<li>Representa números negativos.</li>
+<li>Se usa en procesadores y computadoras.</li>
+<li>Facilita operaciones aritméticas.</li>
+<li>Se basa en números binarios.</li>
+<li>Es el método más utilizado para enteros con signo.</li>
+</ul>
+
+</div>
+
+<div class="principal">
+
+<h2>Calculadora de Complemento A2</h2>
+
+<p>Ingresa un número binario:</p>
+
+<input type="text" id="binario" placeholder="Ejemplo: 0101">
+
+<button onclick="calcularA2()">Calcular</button>
+
+<div style="margin-top:20px;font-size:18px;line-height:2;">
+<p>Complemento A2: <span id="resultado">-</span></p>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function calcularA2(){
+
+let bin = document.getElementById("binario").value;
+
+if(bin==""){
+alert("Ingresa un número binario");
+return;
+}
+
+let invertido = "";
+
+for(let i=0;i<bin.length;i++){
+invertido += (bin[i]=="0") ? "1" : "0";
+}
+
+let decimal = parseInt(invertido,2)+1;
+
+let resultado = decimal.toString(2);
+
+while(resultado.length < bin.length){
+resultado = "0" + resultado;
+}
+
+document.getElementById("resultado").innerHTML = resultado;
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menú Sistemas Numéricos</title>
+
+<style>
+
+    body{
+        margin:0;
+        font-family: Arial, sans-serif;
+        background:#0f172a;
+        color:white;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+    }
+
+    .contenedor{
+        width:900px;
+        background:#1e293b;
+        border-radius:20px;
+        padding:30px;
+        box-shadow:0 0 20px rgba(0,0,0,0.5);
+        position:relative;
+    }
+
+    h1{
+        text-align:center;
+        margin-bottom:30px;
+    }
+
+    .menu{
+        display:flex;
+        justify-content:space-between;
+        gap:40px;
+    }
+
+    .columna{
+        width:48%;
+    }
+
+    .titulo{
+        font-size:28px;
+        font-weight:bold;
+        margin-bottom:20px;
+        color:#86efac;
+    }
+
+    .boton{
+        display:block;
+        text-decoration:none;
+        background:white;
+        color:black;
+        padding:15px;
+        margin-bottom:15px;
+        border:3px solid #22c55e;
+        border-radius:25px;
+        font-size:18px;
+        font-weight:bold;
+        transition:0.3s;
+    }
+
+    .boton:hover{
+        background:#22c55e;
+        color:white;
+        transform:scale(1.03);
+    }
+
+    .inicio{
+        position:absolute;
+        top:20px;
+        left:20px;
+        background:#22c55e;
+        color:white;
+        padding:10px 18px;
+        border-radius:15px;
+        text-decoration:none;
+        font-weight:bold;
+        transition:0.3s;
+    }
+
+    .inicio:hover{
+        background:#16a34a;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <a href="Inicio.html" class="inicio">Inicio</a>
+
+    <h1>Índice</h1>
+
+    <div class="menu">
+
+        <div class="columna">
+
+            <div class="titulo">Sistemas Numéricos</div>
+
+            <a href="concepto.html" class="boton">
+                Concepto de Sistema Numérico
+            </a>
+
+            <a href="decimal.html" class="boton">
+                10 Sistema Decimal
+            </a>
+
+            <a href="binario.html" class="boton">
+                01 Sistema Binario
+            </a>
+
+            <a href="octal.html" class="boton">
+                8 Sistema Octal
+            </a>
+
+            <a href="hexadecimal.html" class="boton">
+                16 Sistema Hexadecimal
+            </a>
+
+        </div>
+
+        <div class="columna">
+
+            <div class="titulo">Operaciones</div>
+
+            <a href="operadores.html" class="boton">
+                Operadores Básicos
+            </a>
+
+            <a href="ComplementoA2.html" class="boton">
+                Complemento A2
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

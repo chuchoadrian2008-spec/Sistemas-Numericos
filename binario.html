@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema Binario</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+}
+
+header{
+    background:#1e293b;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:3px solid #22c55e;
+}
+
+h1{
+    margin:0;
+    color:#86efac;
+    font-size:38px;
+}
+
+.volver{
+    text-decoration:none;
+    background:#22c55e;
+    color:white;
+    padding:12px 20px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.contenedor{
+    width:90%;
+    margin:auto;
+    padding:30px 0;
+}
+
+.principal{
+    background:#1e293b;
+    border:2px solid #22c55e;
+    border-radius:20px;
+    padding:25px;
+    margin-bottom:30px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:25px;
+}
+
+.caja{
+    background:#1e293b;
+    border:2px solid #22c55e;
+    border-radius:20px;
+    padding:20px;
+}
+
+h2{
+    color:#86efac;
+}
+
+iframe{
+    width:100%;
+    height:220px;
+    border:none;
+    border-radius:15px;
+}
+
+img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+td, th{
+    border:1px solid white;
+    padding:10px;
+    text-align:center;
+}
+
+input{
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    width:220px;
+}
+
+button{
+    padding:10px 18px;
+    border:none;
+    border-radius:10px;
+    background:#3b82f6;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+ul{
+    line-height:2;
+}
+
+@media(max-width:900px){
+    .grid{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<a href="menu.html" class="volver">
+Regresar
+</a>
+
+<h1>Sistema Binario</h1>
+
+</header>
+
+<div class="contenedor">
+
+<div class="principal">
+
+<h2>¿Qué es el sistema binario?</h2>
+
+<p>
+El sistema binario es un sistema numérico de base 2.
+Utiliza únicamente dos símbolos: 0 y 1.
+</p>
+
+<p>
+Es el sistema utilizado en computadoras y dispositivos electrónicos,
+ya que toda la información digital se representa con estos valores.
+</p>
+<h2>Conversión de Binario a otros sistemas</h2>
+
+<h3>Binario a Decimal</h3>
+<p>Para convertir un número binario a decimal se multiplica cada dígito por una potencia de 2, comenzando desde la derecha.</p>
+
+<p><strong>Ejemplo:</strong> Convertir 1011 a decimal</p>
+<p>
+1 × 2³ = 8<br>
+0 × 2² = 0<br>
+1 × 2¹ = 2<br>
+1 × 2⁰ = 1
+</p>
+
+<p>Se suman los resultados:</p>
+<p>8 + 0 + 2 + 1 = 11</p>
+
+<p><strong>Resultado:</strong> 11</p>
+
+<hr>
+
+<h3>Binario a Octal</h3>
+<p>Para convertir de binario a octal se agrupan los bits de 3 en 3, de derecha a izquierda.</p>
+
+<p><strong>Ejemplo:</strong> Convertir 110101 a octal</p>
+<p>
+110 101
+</p>
+
+<p>Cada grupo se convierte a decimal:</p>
+<p>
+110 = 6<br>
+101 = 5
+</p>
+
+<p><strong>Resultado:</strong> 65</p>
+
+<hr>
+
+<h3>Binario a Hexadecimal</h3>
+<p>Para convertir de binario a hexadecimal se agrupan los bits de 4 en 4, de derecha a izquierda.</p>
+
+<p><strong>Ejemplo:</strong> Convertir 101111 a hexadecimal</p>
+<p>
+0010 1111
+</p>
+
+<p>Cada grupo se convierte:</p>
+<p>
+0010 = 2<br>
+1111 = F
+</p>
+
+<p><strong>Resultado:</strong> 2F</p>
+
+</div>
+
+<div class="grid">
+
+<div class="caja">
+
+<h2>Video</h2>
+
+    <video width="100%" controls>
+        <source src="3.mp4" type="video/mp4">
+    </video>
+
+</div>
+
+<div class="caja">
+
+<h2>Ejemplo</h2>
+
+<img src="3.png">
+
+</div>
+
+<div class="caja">
+
+<h2>Equivalencias</h2>
+
+<table>
+
+<tr>
+<th>Decimal</th>
+<th>Binario</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>101</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>1000</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<div class="principal" style="margin-top:30px;">
+
+<h2>Características</h2>
+
+<ul>
+<li>Base 2.</li>
+<li>Usa 0 y 1.</li>
+<li>Se usa en informática.</li>
+<li>Representa datos digitales.</li>
+<li>Es fundamental en computación.</li>
+</ul>
+
+</div>
+
+<div class="principal">
+
+<h2>Convertidor Binario</h2>
+
+<p>Escribe un número binario:</p>
+
+<input type="text" id="binInput" placeholder="Ejemplo: 1010">
+
+<button onclick="convertir()">Convertir</button>
+
+<div style="margin-top:20px; line-height:2; font-size:18px;">
+    <p>Decimal: <span id="decimal">-</span></p>
+    <p>Octal: <span id="octal">-</span></p>
+    <p>Hexadecimal: <span id="hexadecimal">-</span></p>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function convertir(){
+
+    let numero = document.getElementById("binInput").value;
+
+    if(numero === ""){
+        alert("Ingresa un número");
+        return;
+    }
+
+    let decimal = parseInt(numero, 2);
+
+    document.getElementById("decimal").innerHTML = decimal;
+    document.getElementById("octal").innerHTML = decimal.toString(8);
+    document.getElementById("hexadecimal").innerHTML = decimal.toString(16).toUpperCase();
+
+}
+
+</script>
+
+</body>
+</html>

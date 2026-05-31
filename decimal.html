@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema Decimal</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+}
+
+header{
+    background:#1e293b;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:3px solid #22c55e;
+}
+
+h1{
+    margin:0;
+    color:#86efac;
+    font-size:38px;
+}
+
+.volver{
+    text-decoration:none;
+    background:#22c55e;
+    color:white;
+    padding:12px 20px;
+    border-radius:20px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.volver:hover{
+    background:#16a34a;
+}
+
+.contenedor{
+    width:90%;
+    margin:auto;
+    padding:30px 0;
+}
+
+.principal{
+    background:#1e293b;
+    border:2px solid #22c55e;
+    border-radius:20px;
+    padding:25px;
+    margin-bottom:30px;
+}
+
+.principal h2{
+    color:#86efac;
+}
+
+.principal p{
+    line-height:1.8;
+    text-align:justify;
+    font-size:17px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:25px;
+}
+
+.caja{
+    background:#1e293b;
+    border:2px solid #22c55e;
+    border-radius:20px;
+    padding:20px;
+}
+
+.caja h2{
+    color:#86efac;
+    margin-top:0;
+}
+
+iframe{
+    width:100%;
+    height:220px;
+    border:none;
+    border-radius:15px;
+}
+
+img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+    border:2px solid #22c55e;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+td, th{
+    border:1px solid white;
+    padding:10px;
+    text-align:center;
+}
+
+ul{
+    line-height:2;
+}
+
+input{
+    width:220px;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    margin-right:10px;
+}
+
+button{
+    padding:12px 20px;
+    background:#22c55e;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#16a34a;
+}
+
+.resultado{
+    margin-top:20px;
+    font-size:18px;
+    line-height:2;
+}
+
+@media(max-width:900px){
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <a href="menu.html" class="volver">
+        Regresar
+    </a>
+
+    <h1>Sistema Decimal</h1>
+
+</header>
+
+<div class="contenedor">
+
+    <div class="principal">
+
+        <h2>¿Qué es el sistema decimal?</h2>
+
+        <p>
+            El sistema decimal es un sistema numérico de base 10,
+            lo que significa que utiliza diez símbolos diferentes:
+            0, 1, 2, 3, 4, 5, 6, 7, 8 y 9.
+        </p>
+
+        <p>
+            Es el sistema más utilizado en la vida cotidiana
+            para representar cantidades y realizar operaciones matemáticas.
+        </p>
+ <h2>Conversión de Decimal a otros sistemas</h2>
+
+<h3>Decimal a Binario</h3>
+<p>El sistema binario utiliza solo los números 0 y 1.</p>
+<p>Para convertir un número decimal a binario se siguen estos pasos:</p>
+
+<ol>
+    <li>Dividir el número entre 2.</li>
+    <li>Anotar el residuo.</li>
+    <li>Volver a dividir el resultado entre 2.</li>
+    <li>Repetir hasta que el cociente sea 0.</li>
+    <li>Leer los residuos de abajo hacia arriba.</li>
+</ol>
+
+<p><strong>Ejemplo:</strong> Convertir 13 a binario</p>
+<p>
+13 ÷ 2 = 6 residuo 1<br>
+6 ÷ 2 = 3 residuo 0<br>
+3 ÷ 2 = 1 residuo 1<br>
+1 ÷ 2 = 0 residuo 1
+</p>
+
+<p><strong>Resultado:</strong> 1101</p>
+
+<hr>
+
+<h3>Decimal a Octal</h3>
+<p>El sistema octal utiliza números del 0 al 7.</p>
+<p>Pasos:</p>
+
+<ol>
+    <li>Dividir el número entre 8.</li>
+    <li>Anotar el residuo.</li>
+    <li>Seguir dividiendo el cociente entre 8.</li>
+    <li>Leer residuos de abajo hacia arriba.</li>
+</ol>
+
+<p><strong>Ejemplo:</strong> Convertir 25 a octal</p>
+<p>
+25 ÷ 8 = 3 residuo 1<br>
+3 ÷ 8 = 0 residuo 3
+</p>
+
+<p><strong>Resultado:</strong> 31</p>
+
+<hr>
+
+<h3>Decimal a Hexadecimal</h3>
+<p>El sistema hexadecimal usa números del 0 al 9 y letras A, B, C, D, E y F.</p>
+
+<ul>
+    <li>A = 10</li>
+    <li>B = 11</li>
+    <li>C = 12</li>
+    <li>D = 13</li>
+    <li>E = 14</li>
+    <li>F = 15</li>
+</ul>
+
+<p>Pasos:</p>
+
+<ol>
+    <li>Dividir el número entre 16.</li>
+    <li>Anotar el residuo.</li>
+    <li>Si es mayor a 9, convertir a letra.</li>
+    <li>Leer de abajo hacia arriba.</li>
+</ol>
+
+<p><strong>Ejemplo:</strong> Convertir 30 a hexadecimal</p>
+<p>
+30 ÷ 16 = 1 residuo 14<br>
+1 ÷ 16 = 0 residuo 1
+</p>
+
+<p>14 = E</p>
+
+<p><strong>Resultado:</strong> 1E</p>
+    </div>
+
+    <div class="grid">
+
+        <div class="caja">
+
+            <h2>Video</h2>
+
+            <video width="100%" controls>
+            <source src="2.mp4" type="video/mp4">
+            </video>
+
+        </div>
+
+        <div class="caja">
+
+            <h2>Ejemplo</h2>
+
+            <img src="2.jpg">
+
+        </div>
+
+        <div class="caja">
+
+            <h2>Valor Posicional</h2>
+
+            <table>
+
+                <tr>
+                    <th>Posición</th>
+                    <th>Valor</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Unidades</td>
+                </tr>
+
+                <tr>
+                    <td>10</td>
+                    <td>Decenas</td>
+                </tr>
+
+                <tr>
+                    <td>100</td>
+                    <td>Centenas</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <div class="principal" style="margin-top:30px;">
+
+        <h2>Características</h2>
+
+        <ul>
+            <li>Su base es 10.</li>
+            <li>Usa los números del 0 al 9.</li>
+            <li>Es el sistema más utilizado.</li>
+            <li>Facilita cálculos matemáticos.</li>
+            <li>Se usa diariamente en todo el mundo.</li>
+        </ul>
+
+    </div>
+
+    <div class="principal">
+
+        <h2>Convertidor Decimal</h2>
+
+        <p>Escribe un número decimal:</p>
+
+        <input type="number" id="decimalInput" placeholder="Ejemplo: 25">
+
+        <button onclick="convertir()">Convertir</button>
+
+        <div class="resultado">
+
+            <p>Binario: <span id="binario">-</span></p>
+            <p>Octal: <span id="octal">-</span></p>
+            <p>Hexadecimal: <span id="hexadecimal">-</span></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+function convertir(){
+
+    let numero = document.getElementById("decimalInput").value;
+
+    if(numero === ""){
+        alert("Ingresa un número");
+        return;
+    }
+
+    numero = parseInt(numero);
+
+    document.getElementById("binario").innerHTML = numero.toString(2);
+    document.getElementById("octal").innerHTML = numero.toString(8);
+    document.getElementById("hexadecimal").innerHTML = numero.toString(16).toUpperCase();
+
+}
+
+</script>
+
+</body>
+</html>
